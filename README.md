@@ -99,14 +99,22 @@ python app.py
 
 Open your browser and navigate to `http://127.0.0.1:5000/`.
 
-## 🧠 Model Architecture
+🧠 Model Development & Selection
+To ensure the system could accurately interpret the nuances of social media text, we conducted a comparative study between traditional Machine Learning and Deep Learning approaches using the same dataset:
 
-The core of the application is a Recurrent Neural Network (RNN) with the following layers:
+1. Baseline Approach: TF-IDF + Logistic Regression
 
-1.  **Embedding Layer:** Maps words to dense vectors.
-2.  **SpatialDropout1D:** Reduces overfitting.
-3.  **LSTM Layer:** Captures sequential dependencies and context in text.
-4.  **Dense Output Layer:** Uses Softmax activation for multi-class classification.
+Method: We initially trained a Logistic Regression model using TF-IDF (Term Frequency-Inverse Document Frequency) for vectorization.
+
+Observation: While fast, this "bag-of-words" approach struggled to capture the sequential context and often missed the sentiment behind complex sentence structures.
+
+2. Selected Approach: LSTM (Long Short-Term Memory)
+
+Method: We developed a Deep Learning model using an LSTM architecture.
+
+Why it was chosen: Unlike the baseline, the LSTM model excels at sequential data processing. Crucially, it was paired with a specialized preprocessing pipeline to handle emojis and decode abbreviations/slang.
+
+Result: The LSTM model demonstrated superior performance in understanding the context required for sarcasm detection and was selected for the final web application deployment.
 
 **Performance:** The model currently achieves an accuracy of approximately **72%** on the test dataset.
 
