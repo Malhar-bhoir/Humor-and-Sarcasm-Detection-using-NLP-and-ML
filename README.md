@@ -116,7 +116,7 @@ Why it was chosen: Unlike the baseline, the LSTM model excels at sequential data
 
 Result: The LSTM model demonstrated superior performance in understanding the context required for sarcasm detection and was selected for the final web application deployment.
 
-**Performance:** The model currently achieves an accuracy of approximately **72%** on the test dataset.
+**Performance:** The model currently achieves an accuracy of approximately **72%** on the test dataset (At just **7** epochs).
 
 ## 🔮 Future Scope
 
