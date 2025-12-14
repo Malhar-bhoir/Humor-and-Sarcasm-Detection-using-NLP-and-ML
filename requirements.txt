@@ -1,0 +1,7 @@
+Flask
+tensorflow
+numpy
+scikit-learn==1.6.1
+emoji
+# pip install python-dotenv --- run this command separately
+# pip install google-api-python-client --- run this command separately
